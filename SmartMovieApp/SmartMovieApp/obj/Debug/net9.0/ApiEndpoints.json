@@ -1,5 +1,15 @@
 [
   {
+    "ContainingType": "SmartMovieApp.Controllers.AddMovie",
+    "Method": "ImportMovies",
+    "RelativePath": "api/AddMovie/import-movies",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "SmartMovieApp.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/Auth/login",
@@ -26,6 +36,22 @@
       {
         "Name": "dto",
         "Type": "SmartMovieApp.DTOs.RegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartMovieApp.Controllers.MoviesController",
+    "Method": "GetMovieByTitle",
+    "RelativePath": "api/Movies/title/{title}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "title",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],

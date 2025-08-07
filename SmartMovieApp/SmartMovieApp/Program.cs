@@ -2,11 +2,17 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using SmartMovieApp.Data;
+using SmartMovieApp.Services;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddHttpClient("OMDbClient", client =>
+{
+    client.BaseAddress = new Uri("http://www.omdbapi.com/");
+});
 
 builder.Services.AddAuthentication(options =>
 {
@@ -36,6 +42,7 @@ builder.Services.AddControllers();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddHttpClient();
+builder.Services.AddScoped<MovieService>();
 
 var app = builder.Build();
 
