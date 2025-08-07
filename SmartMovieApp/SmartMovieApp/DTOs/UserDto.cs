@@ -1,4 +1,4 @@
-﻿namespace SmartMovieApp.Models
+﻿namespace SmartMovieApp.DTOs
 {
     public class UserDto
     {

@@ -22,6 +22,11 @@ namespace SmartMovieApp.Controllers
         {
             return View();
         }
+        public IActionResult Home()
+        {
+            return View();
+        }
+
 
     }
 }

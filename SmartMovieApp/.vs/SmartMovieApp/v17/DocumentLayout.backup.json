@@ -1,30 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\feyza\\OneDrive\\Masa\u00FCst\u00FC\\SmartMovieApp\\SmartMovieApp\\",
+  "WorkspaceRootPath": "C:\\Users\\jalka\\source\\repos\\SmartMovieApp\\SmartMovieApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8A4007FC-20BF-417C-A795-0E78FB176E32}|SmartMovieApp\\SmartMovieApp.csproj|c:\\users\\feyza\\onedrive\\masa\u00FCst\u00FC\\smartmovieapp\\smartmovieapp\\smartmovieapp\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8A4007FC-20BF-417C-A795-0E78FB176E32}|SmartMovieApp\\SmartMovieApp.csproj|c:\\users\\jalka\\source\\repos\\smartmovieapp\\smartmovieapp\\smartmovieapp\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A4007FC-20BF-417C-A795-0E78FB176E32}|SmartMovieApp\\SmartMovieApp.csproj|solutionrelative:smartmovieapp\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A4007FC-20BF-417C-A795-0E78FB176E32}|SmartMovieApp\\SmartMovieApp.csproj|c:\\users\\jalka\\source\\repos\\smartmovieapp\\smartmovieapp\\smartmovieapp\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8A4007FC-20BF-417C-A795-0E78FB176E32}|SmartMovieApp\\SmartMovieApp.csproj|solutionrelative:smartmovieapp\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A4007FC-20BF-417C-A795-0E78FB176E32}|SmartMovieApp\\SmartMovieApp.csproj|c:\\users\\jalka\\source\\repos\\smartmovieapp\\smartmovieapp\\smartmovieapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A4007FC-20BF-417C-A795-0E78FB176E32}|SmartMovieApp\\SmartMovieApp.csproj|solutionrelative:smartmovieapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A4007FC-20BF-417C-A795-0E78FB176E32}|SmartMovieApp\\SmartMovieApp.csproj|c:\\users\\jalka\\source\\repos\\smartmovieapp\\smartmovieapp\\smartmovieapp\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A4007FC-20BF-417C-A795-0E78FB176E32}|SmartMovieApp\\SmartMovieApp.csproj|solutionrelative:smartmovieapp\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A4007FC-20BF-417C-A795-0E78FB176E32}|SmartMovieApp\\SmartMovieApp.csproj|c:\\users\\feyza\\onedrive\\masa\u00FCst\u00FC\\smartmovieapp\\smartmovieapp\\smartmovieapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8A4007FC-20BF-417C-A795-0E78FB176E32}|SmartMovieApp\\SmartMovieApp.csproj|c:\\users\\jalka\\source\\repos\\smartmovieapp\\smartmovieapp\\smartmovieapp\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8A4007FC-20BF-417C-A795-0E78FB176E32}|SmartMovieApp\\SmartMovieApp.csproj|solutionrelative:smartmovieapp\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A4007FC-20BF-417C-A795-0E78FB176E32}|SmartMovieApp\\SmartMovieApp.csproj|c:\\users\\jalka\\source\\repos\\smartmovieapp\\smartmovieapp\\smartmovieapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8A4007FC-20BF-417C-A795-0E78FB176E32}|SmartMovieApp\\SmartMovieApp.csproj|solutionrelative:smartmovieapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A4007FC-20BF-417C-A795-0E78FB176E32}|SmartMovieApp\\SmartMovieApp.csproj|c:\\users\\jalka\\source\\repos\\smartmovieapp\\smartmovieapp\\smartmovieapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A4007FC-20BF-417C-A795-0E78FB176E32}|SmartMovieApp\\SmartMovieApp.csproj|solutionrelative:smartmovieapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A4007FC-20BF-417C-A795-0E78FB176E32}|SmartMovieApp\\SmartMovieApp.csproj|c:\\users\\feyza\\onedrive\\masa\u00FCst\u00FC\\smartmovieapp\\smartmovieapp\\smartmovieapp\\models\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A4007FC-20BF-417C-A795-0E78FB176E32}|SmartMovieApp\\SmartMovieApp.csproj|solutionrelative:smartmovieapp\\models\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8A4007FC-20BF-417C-A795-0E78FB176E32}|SmartMovieApp\\SmartMovieApp.csproj|c:\\users\\jalka\\source\\repos\\smartmovieapp\\smartmovieapp\\smartmovieapp\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8A4007FC-20BF-417C-A795-0E78FB176E32}|SmartMovieApp\\SmartMovieApp.csproj|solutionrelative:smartmovieapp\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A4007FC-20BF-417C-A795-0E78FB176E32}|SmartMovieApp\\SmartMovieApp.csproj|c:\\users\\feyza\\onedrive\\masa\u00FCst\u00FC\\smartmovieapp\\smartmovieapp\\smartmovieapp\\models\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A4007FC-20BF-417C-A795-0E78FB176E32}|SmartMovieApp\\SmartMovieApp.csproj|solutionrelative:smartmovieapp\\models\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A4007FC-20BF-417C-A795-0E78FB176E32}|SmartMovieApp\\SmartMovieApp.csproj|c:\\users\\feyza\\onedrive\\masa\u00FCst\u00FC\\smartmovieapp\\smartmovieapp\\smartmovieapp\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A4007FC-20BF-417C-A795-0E78FB176E32}|SmartMovieApp\\SmartMovieApp.csproj|solutionrelative:smartmovieapp\\models\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A4007FC-20BF-417C-A795-0E78FB176E32}|SmartMovieApp\\SmartMovieApp.csproj|c:\\users\\feyza\\onedrive\\masa\u00FCst\u00FC\\smartmovieapp\\smartmovieapp\\smartmovieapp\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A4007FC-20BF-417C-A795-0E78FB176E32}|SmartMovieApp\\SmartMovieApp.csproj|solutionrelative:smartmovieapp\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8A4007FC-20BF-417C-A795-0E78FB176E32}|SmartMovieApp\\SmartMovieApp.csproj|c:\\users\\jalka\\source\\repos\\smartmovieapp\\smartmovieapp\\smartmovieapp\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A4007FC-20BF-417C-A795-0E78FB176E32}|SmartMovieApp\\SmartMovieApp.csproj|solutionrelative:smartmovieapp\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,92 +46,159 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RegisterDto.cs",
-              "DocumentMoniker": "C:\\Users\\feyza\\OneDrive\\Masa\u00FCst\u00FC\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\Models\\RegisterDto.cs",
-              "RelativeDocumentMoniker": "SmartMovieApp\\Models\\RegisterDto.cs",
-              "ToolTip": "C:\\Users\\feyza\\OneDrive\\Masa\u00FCst\u00FC\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\Models\\RegisterDto.cs",
-              "RelativeToolTip": "SmartMovieApp\\Models\\RegisterDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T11:32:41.502Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LoginDto.cs",
-              "DocumentMoniker": "C:\\Users\\feyza\\OneDrive\\Masa\u00FCst\u00FC\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\Models\\LoginDto.cs",
-              "RelativeDocumentMoniker": "SmartMovieApp\\Models\\LoginDto.cs",
-              "ToolTip": "C:\\Users\\feyza\\OneDrive\\Masa\u00FCst\u00FC\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\Models\\LoginDto.cs",
-              "RelativeToolTip": "SmartMovieApp\\Models\\LoginDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T11:32:40.179Z",
+              "DocumentIndex": 1,
+              "Title": "Home.cshtml",
+              "DocumentMoniker": "C:\\Users\\jalka\\source\\repos\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\Views\\Home\\Home.cshtml",
+              "RelativeDocumentMoniker": "SmartMovieApp\\Views\\Home\\Home.cshtml",
+              "ToolTip": "C:\\Users\\jalka\\source\\repos\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\Views\\Home\\Home.cshtml",
+              "RelativeToolTip": "SmartMovieApp\\Views\\Home\\Home.cshtml",
+              "ViewState": "AgIAACIAAAAAAAAAAAAIwEMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-07T12:29:04.768Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "AppUser.cs",
-              "DocumentMoniker": "C:\\Users\\feyza\\OneDrive\\Masa\u00FCst\u00FC\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\Models\\AppUser.cs",
-              "RelativeDocumentMoniker": "SmartMovieApp\\Models\\AppUser.cs",
-              "ToolTip": "C:\\Users\\feyza\\OneDrive\\Masa\u00FCst\u00FC\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\Models\\AppUser.cs",
-              "RelativeToolTip": "SmartMovieApp\\Models\\AppUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T11:29:41.752Z",
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\jalka\\source\\repos\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "SmartMovieApp\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\jalka\\source\\repos\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "SmartMovieApp\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAwE0AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-07T12:18:02.716Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\feyza\\OneDrive\\Masa\u00FCst\u00FC\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "SmartMovieApp\\Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\feyza\\OneDrive\\Masa\u00FCst\u00FC\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "SmartMovieApp\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAxAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\jalka\\source\\repos\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\Program.cs",
+              "RelativeDocumentMoniker": "SmartMovieApp\\Program.cs",
+              "ToolTip": "C:\\Users\\jalka\\source\\repos\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\Program.cs",
+              "RelativeToolTip": "SmartMovieApp\\Program.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACwAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T11:18:21.012Z",
+              "WhenOpened": "2025-08-07T12:07:22.365Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\feyza\\OneDrive\\Masa\u00FCst\u00FC\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "SmartMovieApp\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\feyza\\OneDrive\\Masa\u00FCst\u00FC\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "SmartMovieApp\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAowEYAAAAoAAAAAAAAAA==",
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\jalka\\source\\repos\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "SmartMovieApp\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\jalka\\source\\repos\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "SmartMovieApp\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAA1wB0AAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T11:14:16.603Z",
+              "WhenOpened": "2025-08-07T12:07:03.622Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\feyza\\OneDrive\\Masa\u00FCst\u00FC\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\Program.cs",
-              "RelativeDocumentMoniker": "SmartMovieApp\\Program.cs",
-              "ToolTip": "C:\\Users\\feyza\\OneDrive\\Masa\u00FCst\u00FC\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\Program.cs",
-              "RelativeToolTip": "SmartMovieApp\\Program.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAACCAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\jalka\\source\\repos\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "SmartMovieApp\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\jalka\\source\\repos\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "SmartMovieApp\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T10:59:59.721Z",
+              "WhenOpened": "2025-08-07T12:04:50.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\jalka\\source\\repos\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "SmartMovieApp\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\jalka\\source\\repos\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "SmartMovieApp\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T12:03:24.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\jalka\\source\\repos\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "SmartMovieApp\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\jalka\\source\\repos\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "SmartMovieApp\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-07T12:02:38.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "C:\\Users\\jalka\\source\\repos\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\DTOs\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "SmartMovieApp\\DTOs\\RegisterDto.cs",
+              "ToolTip": "C:\\Users\\jalka\\source\\repos\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\DTOs\\RegisterDto.cs",
+              "RelativeToolTip": "SmartMovieApp\\DTOs\\RegisterDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T11:56:34.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\jalka\\source\\repos\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "SmartMovieApp\\Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\jalka\\source\\repos\\SmartMovieApp\\SmartMovieApp\\SmartMovieApp\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "SmartMovieApp\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-07T11:54:36.431Z",
               "EditorCaption": ""
             }
           ]

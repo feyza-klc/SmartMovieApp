@@ -26,17 +26,23 @@ builder.Services.AddAuthentication(options =>
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("bu-cok-gizli-ve-en-az-32-karakter-olan-bir-keydir!"))
         };
     });
+
 builder.Services.AddDbContext<AppDbContext>(options =>
 options.UseSqlServer(connectionString));
+
+builder.Services.AddSession();
 
 builder.Services.AddControllers();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddHttpClient();
 
 var app = builder.Build();
 
 app.UseHttpsRedirection();
 app.UseRouting();
+
+app.UseSession();
 
 app.UseAuthentication();
 app.UseAuthorization();

@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="home-container">
+    <h1>Hoş Geldiniz 🎉</h1>
+    <p>Artık giriş yaptınız. Film dünyasını keşfetmeye başlayabilirsiniz!</p>
+    <div class="home-buttons">
+        <a href="#" class="btn">Filmleri Gör</a>
+        <a href="#" class="btn">Favorilerim</a>
+        <a href="#" class="btn">Çıkış Yap</a>
+    </div>
+</div>
+
+<style>
+    body {
+        background: url('/images/indexbg.jpg') no-repeat center center fixed;
+        background-size: cover;
+        font-family: 'Segoe UI', sans-serif;
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    .home-container {
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 16px;
+        padding: 40px;
+        margin: 100px auto;
+        max-width: 600px;
+        text-align: center;
+        box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    }
+
+        .home-container h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .home-container p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #ccc;
+        }
+
+    .home-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        border: none;
+        border-radius: 10px;
+        background-color: #3b82f6;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn:hover {
+            background-color: #2563eb;
+        }
+</style>

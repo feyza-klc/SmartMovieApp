@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SmartMovieApp.Models
+namespace SmartMovieApp.DTOs
 {
     public class RegisterDto
     {

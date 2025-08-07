@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "SmartMovieApp.Models.LoginDto",
+        "Type": "SmartMovieApp.DTOs.LoginDto",
         "IsRequired": true
       }
     ],
@@ -25,7 +25,7 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "SmartMovieApp.Models.RegisterDto",
+        "Type": "SmartMovieApp.DTOs.RegisterDto",
         "IsRequired": true
       }
     ],

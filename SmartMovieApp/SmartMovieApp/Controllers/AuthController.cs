@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using SmartMovieApp.Data;
+using SmartMovieApp.DTOs;
 using SmartMovieApp.Models;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
