@@ -223,10 +223,11 @@ C:\Users\feyza\OneDrive\Masaüstü\SmartMovieApp\SmartMovieApp\SmartMovieApp\obj
 C:\Users\feyza\OneDrive\Masaüstü\SmartMovieApp\SmartMovieApp\SmartMovieApp\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\feyza\OneDrive\Masaüstü\SmartMovieApp\SmartMovieApp\SmartMovieApp\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\feyza\OneDrive\Masaüstü\SmartMovieApp\SmartMovieApp\SmartMovieApp\obj\Debug\net9.0\staticwebassets.build.endpoints.json
-C:\Users\feyza\OneDrive\Masaüstü\SmartMovieApp\SmartMovieApp\SmartMovieApp\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\feyza\OneDrive\Masaüstü\SmartMovieApp\SmartMovieApp\SmartMovieApp\obj\Debug\net9.0\SmartMov.6A14C467.Up2Date
 C:\Users\feyza\OneDrive\Masaüstü\SmartMovieApp\SmartMovieApp\SmartMovieApp\obj\Debug\net9.0\SmartMovieApp.dll
 C:\Users\feyza\OneDrive\Masaüstü\SmartMovieApp\SmartMovieApp\SmartMovieApp\obj\Debug\net9.0\refint\SmartMovieApp.dll
 C:\Users\feyza\OneDrive\Masaüstü\SmartMovieApp\SmartMovieApp\SmartMovieApp\obj\Debug\net9.0\SmartMovieApp.pdb
 C:\Users\feyza\OneDrive\Masaüstü\SmartMovieApp\SmartMovieApp\SmartMovieApp\obj\Debug\net9.0\SmartMovieApp.genruntimeconfig.cache
 C:\Users\feyza\OneDrive\Masaüstü\SmartMovieApp\SmartMovieApp\SmartMovieApp\obj\Debug\net9.0\ref\SmartMovieApp.dll
+C:\Users\feyza\OneDrive\Masaüstü\SmartMovieApp\SmartMovieApp\SmartMovieApp\obj\Debug\net9.0\SmartMovieApp.sourcelink.json
+C:\Users\feyza\OneDrive\Masaüstü\SmartMovieApp\SmartMovieApp\SmartMovieApp\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
