@@ -110,6 +110,13 @@ namespace SmartMovieApp.Controllers
 
             return RedirectToAction("Home", "Home");
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync();
+            return RedirectToAction("Index", "Home");
+        }
 
     }
 }

@@ -4,48 +4,122 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - SmartMovieApp</title>
-    <script type="importmap"></script>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/SmartMovieApp.styles.css" asp-append-version="true" />
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SmartMovieApp.styles.css" asp-append-version="true" />
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            background-color: #1c1c1c;
+        }
+
+        .navbar-brand, .nav-link {
+            color: #f8f8f8 !important;
+        }
+
+            .nav-link:hover {
+                color: #ffc107 !important;
+            }
+
+        footer {
+            background-color: #1c1c1c;
+            color: #ccc;
+            padding: 15px 0;
+            margin-top: 30px;
+        }
+
+        .footer a {
+            color: #ffc107;
+            text-decoration: none;
+        }
+
+            .footer a:hover {
+                text-decoration: underline;
+            }
+
+        main {
+            padding-top: 30px;
+        }
+    </style>
 </head>
 <body>
+
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SmartMovieApp</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <!-- Giriş yapmışsa -->
+                    <a class="navbar-brand fw-bold" asp-controller="Home" asp-action="Home">🎬 SmartMovieApp</a>
+                }
+                else
+                {
+                    <!-- Giriş yapmamışsa -->
+                    <a class="navbar-brand fw-bold" asp-controller="Home" asp-action="Index">🎬 SmartMovieApp</a>
+                }
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Movie" asp-action="Favorites">Favorites</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="User" asp-action="Profile">My Profile</a>
+                            </li>
+                            <li class="nav-item d-flex align-items-center">
+                                <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline m-0 p-0">
+                                    <button type="submit" class="btn nav-link border-0 bg-transparent p-0 m-0" style="line-height: normal;">Logout</button>
+                                    @Html.AntiForgeryToken()
+                                </form>
+                            </li>
+
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Account" asp-action="Login">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Account" asp-action="Register">Register</a>
+                            </li>
+                        }
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="footer text-center">
         <div class="container">
-            &copy; 2025 - SmartMovieApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2025 - SmartMovieApp | <a asp-controller="Home" asp-action="Privacy">Privacy Policy</a>
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>

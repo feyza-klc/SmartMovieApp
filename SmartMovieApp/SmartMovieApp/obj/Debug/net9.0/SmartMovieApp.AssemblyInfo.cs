@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartMovieApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11e286d61d05b0db17a7215b2fe7fa11518b4752")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba47f8340aad721eb1800c7c4a9557852f97b6f9")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartMovieApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartMovieApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

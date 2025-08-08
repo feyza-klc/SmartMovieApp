@@ -1,12 +1,24 @@
 ﻿@model List<SmartMovieApp.Models.Movie>
 
-<h2 class="text-center mt-4">Filmler</h2>
+<!-- 🎥 Hero Banner -->
+<div class="hero-section text-white text-center py-5 mb-5">
+    <div class="container">
+        <h1 class="display-5 fw-bold">Hoş Geldiniz!</h1>
+        <p class="lead mb-4">En popüler filmleri keşfedin, yorum yapın, favorilerinizi kaydedin.</p>
+        <div>
+            <a class="btn btn-warning fw-semibold me-2" href="/Account/Login">🎬 Giriş Yap</a>
+            <a class="btn btn-outline-light fw-semibold" href="/Account/Register">📝 Kayıt Ol</a>
+        </div>
+    </div>
+</div>
+
+<h2 class="text-center mb-4">🎬 Popüler Filmler</h2>
 
 <!-- 🔍 Arama Kutusu -->
 <div class="container mb-4">
-    <form method="get" asp-action="Index" class="d-flex justify-content-center mb-4">
+    <form method="get" asp-action="Index" class="d-flex justify-content-center">
         <input type="text" name="query" value="@ViewBag.SearchQuery" class="form-control w-50 me-2" placeholder="Film ara..." />
-        <button type="submit" class="btn btn-primary">Ara</button>
+        <button type="submit" class="btn btn-warning text-dark fw-semibold">Ara</button>
     </form>
 </div>
 
@@ -15,25 +27,62 @@
     <div class="row">
         @foreach (var movie in Model)
         {
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow">
-                    <img src="@movie.PosterUrl" class="card-img-top" alt="@movie.Title" style="height: 400px; object-fit: cover;" />
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm movie-card border-0">
+                    <div class="card-img-top-wrapper">
+                        <img src="@movie.PosterUrl" class="card-img-top" alt="@movie.Title" />
+                    </div>
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">@movie.Title</h5>
-                        <p class="card-text">@movie.Description?.Substring(0, Math.Min(100, movie.Description.Length))...</p>
-                        <p><strong>IMDB:</strong> @movie.ImdbRating</p>
-                        <p><strong>Yayın:</strong> @movie.ReleaseDate.ToShortDateString()</p>
+                        <h5 class="card-title text-primary fw-bold">@movie.Title</h5>
+                        <p class="card-text text-muted">@movie.Description?.Substring(0, Math.Min(100, movie.Description.Length))...</p>
+                        <div class="mt-auto">
+                            <p class="mb-1"><strong>🎯 IMDB:</strong> @movie.ImdbRating</p>
+                            <p><strong>📅 Yayın:</strong> @movie.ReleaseDate.ToShortDateString()</p>
+                        </div>
                     </div>
                 </div>
             </div>
         }
     </div>
-
-  
-        <div class="text-center mb-4">
-            <p>Devamı için giriş yapın veya kayıt olun.</p>
-            <a class="btn btn-primary me-2" href="/Account/Login">Giriş Yap</a>
-            <a class="btn btn-secondary" href="/Account/Register">Kayıt Ol</a>
-        </div>
-
 </div>
+
+<!-- 🎨 Stil -->
+<style>
+    .hero-section {
+        background: linear-gradient(to right, #1c1c1c, #343a40);
+        background-size: cover;
+        background-position: center;
+        border-bottom: 5px solid #ffc107;
+    }
+
+    .movie-card {
+        transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+        .movie-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+        }
+
+    .card-img-top-wrapper {
+        height: 400px;
+        overflow: hidden;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+    }
+
+    .card-img-top {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .movie-card:hover .card-img-top {
+        transform: scale(1.05);
+    }
+
+    .card-footer a {
+        font-size: 0.9rem;
+    }
+</style>

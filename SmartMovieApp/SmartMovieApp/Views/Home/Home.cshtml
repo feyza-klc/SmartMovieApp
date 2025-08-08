@@ -1,12 +1,13 @@
 ﻿@model List<SmartMovieApp.Models.Movie>
 
-<h2 class="text-center mt-4">Hoş Geldin, @User.Identity.Name 🎉</h2>
+<!-- 👋 Karşılama -->
+<h2 class="text-center mt-4">Hoş Geldin, <span class="text-primary">@User.Identity.Name</span> 🎉</h2>
 
 <!-- 🔍 Arama Kutusu -->
 <div class="container mb-4">
-    <form method="get" asp-action="Home" class="d-flex justify-content-center mb-4">
+    <form method="get" asp-action="Home" class="d-flex justify-content-center">
         <input type="text" name="query" value="@ViewBag.SearchQuery" class="form-control w-50 me-2" placeholder="Film ara..." />
-        <button type="submit" class="btn btn-primary">Ara</button>
+        <button type="submit" class="btn btn-warning fw-semibold text-dark">Ara</button>
     </form>
 </div>
 
@@ -15,25 +16,85 @@
     <div class="row">
         @foreach (var movie in Model)
         {
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow">
-                    <img src="@movie.PosterUrl" class="card-img-top" alt="@movie.Title" style="height: 400px; object-fit: cover;" />
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 shadow movie-card border-0">
+                    <div class="card-img-top-wrapper">
+                        <img src="@movie.PosterUrl" class="card-img-top" alt="@movie.Title" />
+                    </div>
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">@movie.Title</h5>
-                        <p class="card-text">@movie.Description?.Substring(0, Math.Min(100, movie.Description.Length))...</p>
-                        <p><strong>IMDB:</strong> @movie.ImdbRating</p>
-                        <p><strong>Yayın:</strong> @movie.ReleaseDate.ToShortDateString()</p>
+                        <h5 class="card-title text-primary fw-bold">@movie.Title</h5>
+                        <p class="card-text text-muted">@movie.Description?.Substring(0, Math.Min(100, movie.Description.Length))...</p>
+                        <p><strong>🎯 IMDB:</strong> @movie.ImdbRating</p>
+                        <p><strong>📅 Yayın:</strong> @movie.ReleaseDate.ToShortDateString()</p>
+                    </div>
 
-                        <!-- 🔘 Kullanıcı işlemleri -->
-                        <div class="mt-auto">
-                            <a href="/Favorites/Add/@movie.Id" class="btn btn-outline-success btn-sm me-2">❤️ Beğen</a>
-                            <a href="/Reviews/Add/@movie.Id" class="btn btn-outline-primary btn-sm me-2">💬 Yorum Yap</a>
-                            <a href="/Ratings/Rate/@movie.Id" class="btn btn-outline-warning btn-sm me-2">⭐ Puan Ver</a>
-                            <a href="/Movies/Details/@movie.Id" class="btn btn-outline-dark btn-sm">🔍 Detay</a>
-                        </div>
+                    <!-- 👤 Kullanıcı Aksiyonları -->
+                    <div class="card-footer bg-white border-top d-flex flex-wrap justify-content-center gap-2 py-3">
+                        <a href="/Favorites/Add/@movie.Id" class="btn btn-outline-danger btn-sm d-flex align-items-center">
+                            ❤️ <span class="ms-1">Beğen</span>
+                        </a>
+                        <a href="/Reviews/Add/@movie.Id" class="btn btn-outline-primary btn-sm d-flex align-items-center">
+                            💬 <span class="ms-1">Yorum Yap</span>
+                        </a>
+                        <a href="/Ratings/Rate/@movie.Id" class="btn btn-outline-warning btn-sm d-flex align-items-center text-dark">
+                            ⭐ <span class="ms-1">Puan Ver</span>
+                        </a>
+                        <a href="/Movies/Details/@movie.Id" class="btn btn-outline-dark btn-sm d-flex align-items-center">
+                            🔍 <span class="ms-1">Detay</span>
+                        </a>
                     </div>
                 </div>
             </div>
         }
     </div>
 </div>
+
+<!-- 🎨 Stil -->
+<style>
+    .movie-card {
+        transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+        .movie-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+    .card-img-top-wrapper {
+        height: 400px;
+        overflow: hidden;
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+    }
+
+    .card-img-top {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .movie-card:hover .card-img-top {
+        transform: scale(1.05);
+    }
+
+    .card-footer .btn {
+        min-width: 100px;
+        font-weight: 500;
+    }
+
+    .card-title {
+        min-height: 48px;
+    }
+
+    @@media(max - width: 576px)
+
+    {
+        .card-footer .btn
+
+    {
+        width: 100%;
+    }
+
+    }
+</style>
