@@ -1,0 +1,23 @@
+﻿@model List<SmartMovieApp.DTOs.MovieDto>
+
+<form method="get" asp-action="Index" class="d-flex justify-content-center mb-4">
+    <input type="text" name="query" value="@ViewBag.SearchQuery" class="form-control w-50 me-2" placeholder="Film ara..." />
+    <button type="submit" class="btn btn-primary">Ara</button>
+</form>
+
+<div class="row">
+    @foreach (var movie in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow">
+                <img src="@movie.Poster" class="card-img-top" alt="@movie.Title" style="height: 400px; object-fit: cover;" />
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">@movie.Title</h5>
+                    <p><strong>Yayın:</strong> @movie.Year</p>
+                    <p><strong>Tür:</strong> @movie.Type</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+

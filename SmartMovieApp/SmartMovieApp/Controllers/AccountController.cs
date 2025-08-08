@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Mvc;
 using SmartMovieApp.DTOs;
 using System.Net.Http;
 using System.Net.Http.Json;
+using System.Security.Claims;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -49,30 +52,64 @@ namespace SmartMovieApp.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginDto model)
         {
-            if (!ModelState.IsValid) return View(model);
+            if (!ModelState.IsValid)
+                return View(model);
 
             var client = _clientFactory.CreateClient();
             var json = JsonSerializer.Serialize(model);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            var response = await client.PostAsync("https://localhost:7168/api/Auth/login", content); // PORT'u düzelt
+            var response = await client.PostAsync("https://localhost:7168/api/Auth/login", content);
 
-            if (response.IsSuccessStatusCode)
-            {
-                var result = await response.Content.ReadAsStringAsync();
-                var userDto = JsonSerializer.Deserialize<UserDto>(result, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
-
-                // Login başarılı → token vs. saklayabilirsin
-                HttpContext.Session.SetString("username", userDto.UserName);
-                HttpContext.Session.SetString("token", userDto.Token);
-
-                return RedirectToAction("Home", "Home");
-            }
-            else
+            if (!response.IsSuccessStatusCode)
             {
                 ViewBag.Error = "Kullanıcı adı, email veya şifre hatalı.";
                 return View(model);
             }
+
+            var result = await response.Content.ReadAsStringAsync();
+
+            UserDto userDto;
+            try
+            {
+                userDto = JsonSerializer.Deserialize<UserDto>(result, new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true
+                });
+            }
+            catch
+            {
+                ViewBag.Error = "Sunucudan geçersiz yanıt alındı.";
+                return View(model);
+            }
+
+            if (userDto == null)
+            {
+                ViewBag.Error = "Sunucudan boş yanıt alındı.";
+                return View(model);
+            }
+
+            var claims = new List<Claim>
+    {
+        new Claim(ClaimTypes.Name, userDto.UserName),
+       
+    };
+
+            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+            var authProperties = new AuthenticationProperties
+            {
+                IsPersistent = true,
+            };
+
+            await HttpContext.SignInAsync(
+                CookieAuthenticationDefaults.AuthenticationScheme,
+                new ClaimsPrincipal(claimsIdentity),
+                authProperties
+            );
+
+            return RedirectToAction("Home", "Home");
         }
+
     }
 }

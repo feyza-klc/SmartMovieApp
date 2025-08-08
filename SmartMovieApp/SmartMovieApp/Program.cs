@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -9,57 +10,62 @@ var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
+// HttpClient - OMDb API için
 builder.Services.AddHttpClient("OMDbClient", client =>
 {
     client.BaseAddress = new Uri("http://www.omdbapi.com/");
 });
 
+// Authentication - Cookie öncelikli
 builder.Services.AddAuthentication(options =>
 {
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
 })
-    .AddJwtBearer(options =>
+.AddCookie(options =>
+{
+    options.LoginPath = "/Account/Login";
+})
+.AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new TokenValidationParameters
     {
-        options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
-        {
-            ValidateIssuer = true,
-            ValidateAudience = true,
-            ValidateLifetime = true,
-            ValidateIssuerSigningKey = true,
-            ValidIssuer = "SmartMovieApp",
-            ValidAudience = "SmartMovieUsers",
-            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("bu-cok-gizli-ve-en-az-32-karakter-olan-bir-keydir!"))
-        };
-    });
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = "SmartMovieApp",
+        ValidAudience = "SmartMovieUsers",
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("bu-cok-gizli-ve-en-az-32-karakter-olan-bir-keydir!"))
+    };
+});
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-options.UseSqlServer(connectionString));
+    options.UseSqlServer(connectionString));
 
+// Session
 builder.Services.AddSession();
 
-builder.Services.AddControllers();
-// Add services to the container.
+// MVC
 builder.Services.AddControllersWithViews();
-builder.Services.AddHttpClient();
+
+// Servisler
 builder.Services.AddScoped<MovieService>();
 
 var app = builder.Build();
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();
+
 app.UseRouting();
 
-app.UseSession();
+app.UseSession();            // SESSION ÖNCE
+app.UseAuthentication();     // AUTHENTICATION
+app.UseAuthorization();      // AUTHORIZATION
 
-app.UseAuthentication();
-app.UseAuthorization();
-
-app.MapStaticAssets();
-
+// Varsayýlan route
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}")
-    .WithStaticAssets();
-
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

@@ -1,67 +1,39 @@
-﻿@{
-    ViewData["Title"] = "Home";
-}
+﻿@model List<SmartMovieApp.Models.Movie>
 
-<div class="home-container">
-    <h1>Hoş Geldiniz 🎉</h1>
-    <p>Artık giriş yaptınız. Film dünyasını keşfetmeye başlayabilirsiniz!</p>
-    <div class="home-buttons">
-        <a href="#" class="btn">Filmleri Gör</a>
-        <a href="#" class="btn">Favorilerim</a>
-        <a href="#" class="btn">Çıkış Yap</a>
-    </div>
+<h2 class="text-center mt-4">Hoş Geldin, @User.Identity.Name 🎉</h2>
+
+<!-- 🔍 Arama Kutusu -->
+<div class="container mb-4">
+    <form method="get" asp-action="Home" class="d-flex justify-content-center mb-4">
+        <input type="text" name="query" value="@ViewBag.SearchQuery" class="form-control w-50 me-2" placeholder="Film ara..." />
+        <button type="submit" class="btn btn-primary">Ara</button>
+    </form>
 </div>
 
-<style>
-    body {
-        background: url('/images/indexbg.jpg') no-repeat center center fixed;
-        background-size: cover;
-        font-family: 'Segoe UI', sans-serif;
-        color: white;
-        margin: 0;
-        padding: 0;
-    }
+<!-- 🎬 Film Kartları -->
+<div class="container">
+    <div class="row">
+        @foreach (var movie in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <img src="@movie.PosterUrl" class="card-img-top" alt="@movie.Title" style="height: 400px; object-fit: cover;" />
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">@movie.Title</h5>
+                        <p class="card-text">@movie.Description?.Substring(0, Math.Min(100, movie.Description.Length))...</p>
+                        <p><strong>IMDB:</strong> @movie.ImdbRating</p>
+                        <p><strong>Yayın:</strong> @movie.ReleaseDate.ToShortDateString()</p>
 
-    .home-container {
-        background-color: rgba(0, 0, 0, 0.6);
-        border-radius: 16px;
-        padding: 40px;
-        margin: 100px auto;
-        max-width: 600px;
-        text-align: center;
-        box-shadow: 0 0 30px rgba(0,0,0,0.5);
-    }
-
-        .home-container h1 {
-            font-size: 40px;
-            margin-bottom: 20px;
-            color: white;
+                        <!-- 🔘 Kullanıcı işlemleri -->
+                        <div class="mt-auto">
+                            <a href="/Favorites/Add/@movie.Id" class="btn btn-outline-success btn-sm me-2">❤️ Beğen</a>
+                            <a href="/Reviews/Add/@movie.Id" class="btn btn-outline-primary btn-sm me-2">💬 Yorum Yap</a>
+                            <a href="/Ratings/Rate/@movie.Id" class="btn btn-outline-warning btn-sm me-2">⭐ Puan Ver</a>
+                            <a href="/Movies/Details/@movie.Id" class="btn btn-outline-dark btn-sm">🔍 Detay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         }
-
-        .home-container p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            color: #ccc;
-        }
-
-    .home-buttons {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .btn {
-        padding: 12px 24px;
-        border: none;
-        border-radius: 10px;
-        background-color: #3b82f6;
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        transition: background-color 0.3s ease;
-    }
-
-        .btn:hover {
-            background-color: #2563eb;
-        }
-</style>
+    </div>
+</div>

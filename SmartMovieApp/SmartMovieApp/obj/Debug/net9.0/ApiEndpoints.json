@@ -43,7 +43,23 @@
   },
   {
     "ContainingType": "SmartMovieApp.Controllers.MoviesController",
-    "Method": "GetMovieByTitle",
+    "Method": "SearchMovies",
+    "RelativePath": "api/Movies/search/{keyword}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "keyword",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SmartMovieApp.Controllers.MoviesController",
+    "Method": "GetMovieByExactTitle",
     "RelativePath": "api/Movies/title/{title}",
     "HttpMethod": "GET",
     "IsController": true,

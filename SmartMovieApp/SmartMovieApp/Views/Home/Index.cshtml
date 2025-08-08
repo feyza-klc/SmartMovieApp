@@ -1,69 +1,39 @@
-﻿@{
-    ViewData["Title"] = "Ana Sayfa";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+﻿@model List<SmartMovieApp.Models.Movie>
 
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        background: url('/images/indexbg.jpg') no-repeat center center fixed;
-        background-size: cover;
-        color: white;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+<h2 class="text-center mt-4">Filmler</h2>
 
-    .welcome-container {
-        max-width: 1000px;
-        margin: 5rem auto;
-        padding: 3rem;
-        background-color: rgba(0, 0, 0, 0.6); /* saydam siyah arka plan */
-        backdrop-filter: blur(6px);
-        border-radius: 20px; /* köşe yumuşatma */
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* hafif gölge efekti */
-        text-align: center;
-    }
+<!-- 🔍 Arama Kutusu -->
+<div class="container mb-4">
+    <form method="get" asp-action="Index" class="d-flex justify-content-center mb-4">
+        <input type="text" name="query" value="@ViewBag.SearchQuery" class="form-control w-50 me-2" placeholder="Film ara..." />
+        <button type="submit" class="btn btn-primary">Ara</button>
+    </form>
+</div>
 
-
-    .welcome-title {
-        font-size: 3.5rem;
-        font-weight: bold;
-        color: #ffffff;
-        margin-bottom: 20px;
-    }
-
-    .welcome-subtext {
-        font-size: 1.25rem;
-        color: #c9d1d9;
-        margin-bottom: 40px;
-    }
-
-    .btn-custom-register {
-        background-color: #238636;
-        color: white;
-        border: none;
-    }
-
-    .btn-custom-login {
-        background-color: whitesmoke;
-        border: 2px solid #58a6ff;
-        color: #58a6ff;
-    }
-
-        .btn-custom-primary:hover,
-        .btn-custom-secondary:hover {
-            opacity: 0.9;
+<!-- 🎬 Film Kartları -->
+<div class="container">
+    <div class="row">
+        @foreach (var movie in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <img src="@movie.PosterUrl" class="card-img-top" alt="@movie.Title" style="height: 400px; object-fit: cover;" />
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">@movie.Title</h5>
+                        <p class="card-text">@movie.Description?.Substring(0, Math.Min(100, movie.Description.Length))...</p>
+                        <p><strong>IMDB:</strong> @movie.ImdbRating</p>
+                        <p><strong>Yayın:</strong> @movie.ReleaseDate.ToShortDateString()</p>
+                    </div>
+                </div>
+            </div>
         }
-</style>
-
-<div class="welcome-container">
-    <h1 class="welcome-title">SmartMovieApp: Binlerce Film, Milyonlarca Yorum Tek Bir Yerde.</h1>
-    <p class="welcome-subtext">
-        Binlerce film hakkında yorumları okuyabilir, kendi favori listenizi oluşturabilirsiniz.
-    </p>
-
-    <div>
-        <a class="btn btn-custom-register btn-lg me-3" href="/Account/Register">Kayıt Ol</a>
-        <a class="btn btn-custom-login btn-lg" href="/Account/Login">Giriş Yap</a>
     </div>
+
+  
+        <div class="text-center mb-4">
+            <p>Devamı için giriş yapın veya kayıt olun.</p>
+            <a class="btn btn-primary me-2" href="/Account/Login">Giriş Yap</a>
+            <a class="btn btn-secondary" href="/Account/Register">Kayıt Ol</a>
+        </div>
+
 </div>
